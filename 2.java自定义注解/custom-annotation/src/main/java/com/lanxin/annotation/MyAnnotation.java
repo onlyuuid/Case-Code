@@ -11,9 +11,9 @@ import java.lang.annotation.Target;
  * @date: 2024/6/11 14:30
  */
 @Target(ElementType.METHOD)          // 定义注解使用范围
-//@Retention(RetentionPolicy.CLASS)  // 定义生命周期为类加载时
+//@Retention(RetentionPolicy.CLASS)  // 定义生命周期为类加载时, 在运行时会被丢弃
 //@Retention(RetentionPolicy.SOURCE) // 表示只在源码中保留, 在编译过程中会被丢弃
-@Retention(RetentionPolicy.RUNTIME)  // 定义生命周期为运行时
+@Retention(RetentionPolicy.RUNTIME)  // 定义生命周期为运行时, 可以通过反射获取该注解
 //@Documented：指定注解是否会包含在Javadoc中。
 //@Inherited：指定注解是否会被子类继承。
 public @interface MyAnnotation {

@@ -23,7 +23,7 @@ public class MyInvocationHandler02 implements InvocationHandler {
     }
 
     /**
-     * 调用被代理对象中的方法
+     * 调用被代理对象中的方法(仅在调用被代理对象方法前执行切面逻辑)
      * @param proxy 生成的代理对象
      * @param method 正在执行的方法
      * @param args 方法参数

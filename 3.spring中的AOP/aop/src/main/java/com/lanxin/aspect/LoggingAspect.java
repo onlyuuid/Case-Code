@@ -1,9 +1,5 @@
 package com.lanxin.aspect;
 
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.Before;
-import org.springframework.stereotype.Component;
-
 /**
  * @author: WuPeng
  * @description: 切面
