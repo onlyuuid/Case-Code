@@ -34,6 +34,117 @@ arr = ['1','2'
       ,'3','4'
       ,'5','6']
 
+# 6.数字类型
+#   python3中数字有3种类型: 整数, 浮点数, 复数
+"""
+    整数: -2,3,4
+    浮点数: 32.1, 11.32
+    复数: 2j, 2 + 3j
+"""
+
+# 7.boolean类型
+bool = True
+# boolean 类型只有两个值, True 和 False
+
+# 8.字符串
+#   (1).python3中单引号(')和双引号(")完全相同
+a = "hello"
+b = 'hello'
+print(a == b) # True
+
+#   (2).使用三引号('''和""")可以指定一个多行字符串
+s = """
+        what's 
+        you 
+        name?
+    """
+#   (3).转义字符 \ \n为换行
+a = "你好\n!"
+print(a)
+
+#   (4).反斜杠可以用来转义, 使用r可以让反斜杠不发生转义
+d = r"hello world\n!"
+print(d) # hello world\n!
+
+#   (5).按字面意义级联字符串, 如: "this" "is" "a" "cat" 会被自动转换为 "thisisacat"
+f = "this" "is" "a" "cat"
+print(f)
+
+#   (6).字符串可以用 +运算符连接在一起, 用 * 运算符重复
+g = "hello" + "world"
+h = "hello" * 2
+print(g)
+print(h)
+
+#   (7).python中的字符串有两种索引方式, 从左往右从0开始, 从右往左从-1开始, s[index,last] index未开始索引,last为结束索引
+j = "python is best language at world!"
+k = j[0:23]     # 含左不含右
+l = j[-9:-1]    # 含右不含左
+print(k)
+print(l)
+
+#   (8).python中的字符串不能改变
+z = "hello!"
+z = "32"
+print(z) # 相当于重新声明了 z = 32
+
+#   (9).python没有单独的字符类型, 一个字符就是长度为1的字符串
+
+#   (10).字符串的字符串切片可以加上步长, s[start,last,step] step为步长
+x = "Does your sister likes to watch TV?"
+c = x[0:10:2]  # De or
+print(c)
+
+# 9.空行
+#   空行不是python语法的一部分, 在编写代码是不插入空行也不会引起报错, 但是空行用于分隔两段不同功能或意义的代码, 可以使代码便于维护和管理
+
+# 10. 等待用户输入
+inp = input("按下回车键退出!\n")
+print(inp)
+
+# 11.同一行显示多条语句
+import sys; v = "runoob"; sys.stdout.write(v + "\n")
+"""
+使用交互模式执行:
+>>> import sys; a = "runoob"; sys.stdout.write(a + "\n") 
+runoob
+7
+>>>
+runoob为6个字符, \n为一个字符,共7个字符
+"""
+
+# 12.多个语句构成代码组
+"""
+    缩进相同的一组语句构成一个代码块, 我们称之为代码组,将首行及后面代码组称为一个子句(clause)
+"""
+n = 4
+
+if n % 2 == 0:
+    print("n 是一个偶数")
+else:
+    print("n 是一个奇数")
+
+# 13.print输出
+#   print输出默认是换行的, 如果想要不换行,需要在变量末尾加上 end=""
+m = "你好"
+nm = "世界"
+
+# 换行输出
+print(m)
+print(nm)
+
+# 不换行输出
+print(m, end="")
+print(nm, end="")
+
+
+
+
+
+
+
+
+
 
 
 
