@@ -1,4 +1,7 @@
-﻿# 1.单行注释
+﻿"""
+一. 基本语法
+"""
+# 1.单行注释
 
 # 2.打印语句
 print("Hello World")
@@ -99,8 +102,8 @@ print(c)
 #   空行不是python语法的一部分, 在编写代码是不插入空行也不会引起报错, 但是空行用于分隔两段不同功能或意义的代码, 可以使代码便于维护和管理
 
 # 10. 等待用户输入
-inp = input("按下回车键退出!\n")
-print(inp)
+# inp = input("按下回车键退出!\n")
+# print(inp)
 
 # 11.同一行显示多条语句
 import sys; v = "runoob"; sys.stdout.write(v + "\n")
@@ -136,6 +139,28 @@ print(nm)
 # 不换行输出
 print(m, end="")
 print(nm, end="")
+
+# 14.import与from...import
+"""
+    (1).在Python中用import或者from...import来导入相应模块
+    (2).将整个模块(somemodule)导入, 格式为: import somemodule
+    (3).从某个模块中导入某个函数的格式为: from somemodule import somefunction
+    (4).从某个模块中导入多个函数的格式为: from somemodule import somefunction1, somefunction2, somefunction3
+    (5).从某个模块中导入所有函数的格式为: from somemodule import * 
+"""
+import sys
+print("=================================================")
+print("命令行参数为:")
+for i in sys.argv:
+    print(i)
+print("\nPython路径为:",sys.path)
+# 导入sys的argv,path
+from sys import argv, path
+print("======================================")
+print("path",path)
+print("argv",argv)
+
+
 
 
 
