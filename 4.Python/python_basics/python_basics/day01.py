@@ -82,7 +82,7 @@ print(h)
 #   (7).python中的字符串有两种索引方式, 从左往右从0开始, 从右往左从-1开始, s[index,last] index未开始索引,last为结束索引
 j = "python is best language at world!"
 k = j[0:23]     # 含左不含右
-l = j[-9:-1]    # 含右不含左
+l = j[-9:-1]    # 含左不含右
 print(k)
 print(l)
 
