@@ -243,8 +243,105 @@ print(str(a))
 """
 
 # 8.List(列表)
+"""
+    List(列表)是python中使用最频繁的数据类型.
+    列表可以完成大多数集合类的数据结构实现. 列表中元素的类型可以不相同, 他支持数字, 字符串甚至包括列表(嵌套).
+    列表是写在方括号[]之间, 用逗号分隔开的元素列表.
+    和字符串一样, 列表同样可以被索引和截取, 列表被截取后返回一个包含所需元素的新列表 
+
+    列表的截取的语法格式:
+    arr[头下标:尾下标]
+"""
+# 索引值以0开始, 以-1为末尾的开始
+arr = ["h","e","l","l","o"]
+tmp = arr[1:3]
+tmp2 = arr[:4]
+tmp3 = arr[3:]
+tmp4 = arr[-4:]
+print(tmp)
+print(tmp2)
+print(tmp3)
+print(tmp4)
+"""
+['e', 'l']
+['h', 'e', 'l', 'l']
+['l', 'o']
+['e', 'l', 'l', 'o']
+"""
+
+# 加号+是列表连接的运算符, 星号*是重复操作
+print(tmp4 + tmp3)  # ['e', 'l', 'l', 'o', 'l', 'o']
+print(tmp4 * 3)     # ['e', 'l', 'l', 'o', 'e', 'l', 'l', 'o', 'e', 'l', 'l', 'o']
+
+# 与Python中的字符串不一样的是, 列表中的元素是可以改变的
+arr2 = ["y","o","u"]
+arr2[-1] = "ur"
+print(arr2) # ['y', 'o', 'ur']
+
+list = [43,32,5,-1,4]
+list[2:4] = "you"
+print(list) # [43, 32, 'y', 'o', 'u', 4]
+list[0:2] = []
+print(list) # ['y', 'o', 'u', 4]
+
+# List中内置了许多方法, 例如append(), pop()等等.
+"""
+注意:
+    (1).列表写在方括号之间, 元素用逗号隔开
+    (2).和字符串一样, 列表可以被索引和切片
+    (3).列表可以使用加号+操作符拼接, 使用*重复
+    (4).列表中的元素可以被改变
+"""
+# python列表截取可以接收第三个参数, 参数作用是截取的步长, 以下实例在索引1到索引4的位置上设置步长为2(间隔一个位置)
+validate = ['h','e','l','l','o']
+"""
+                 ↑       ↑
+"""
+print(validate[1:4:2]) # ['e', 'l']
+
+# 如果第三个参数为负数表示逆向读取, 以下实例用于反转字符串:
+def reverseWords(input):
+    inputWord = input.split(" ")
+
+    # 翻转字符串
+    # 假设列表list = [1,2,3,4]
+    # list[0]=1, list[1]=2,  -1表示最后一个元素,list[-1]=list[3]=4
+    # inputWord[-1::-1] 有三个参数
+    # 第一个参数-1表示最后一个参数
+    # 第二个参数为空, 表示移动到列表末尾
+    # 第三个参数为步长, -1表示逆向
+    inputWord = inputWord[-1::-1]
+    output = ' '.join(inputWord)
+    return output
+
+if __name__ == '__main__':
+    input = "I like runoob"
+    rw = reverseWords(input)
+    print(rw) # runoob like I
+
+# 9.Tuple(元祖)
+"""
+    元组(tuple)和列表类似, 不同之处在于元组的的元素不能改变, 元组写在小括号()里, 元素之间使用逗号隔开.
+    元组中的类型也可以不相同 
+"""
+tuple = (1,32," you",True," like","what do")
+tinyTuple = ("Does","do")
+print(tuple)        # 输出完整元组
+print(tuple[0])     # 输出元组中的第一个元素
+print(tuple[1:3])   # 输出元组中前两个元素
+print(tuple[-1] +  tuple[2] + tuple[-2] ) # 连接元组中的指定元素
+print(tuple * 2)    # 输出两次元组
+print(tuple + tinyTuple)  # 连接元组
+"""
+(1, 32, ' you', True, ' like', 'what do')
+1
+(32, ' you')
+what do you like
+(1, 32, ' you', True, ' like', 'what do', 1, 32, ' you', True, ' like', 'what do')
+(1, 32, ' you', True, ' like', 'what do', 'Does', 'do')
 
 
+"""
 
 
 
