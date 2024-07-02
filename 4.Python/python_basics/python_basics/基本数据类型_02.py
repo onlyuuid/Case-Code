@@ -400,7 +400,7 @@ b = set('djaklhdkal')
 print(a)
 
 print(a - b)    # a和b的差集  返回a集合中有但b集合中没有的元素集合
-print(a | b)    # a和b的并集  返回a集合加上b集合中的元素集合
+print(a | b)    # a和b的并集  返回a集合加上b集合后去重的元素集合
 print(a & b)    # a和b的交集  返回a集合和b集合中共同有的元素集合
 print(a ^ b)    #            返回a集合和b集合中不同时出现的元素集合
 """
