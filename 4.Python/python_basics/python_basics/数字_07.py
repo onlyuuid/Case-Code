@@ -165,7 +165,20 @@ print(h)
 print(jk)
 print(le)
 
-
+# 三角函数
+"""
+Python包含以下三角函数
+    acos(x)         返回x的反余弦弧度值
+    asin(x)         返回x的反正弦弧度值
+    atan(x)         返回x的反正切弧度值
+    atan2(y,x)      返回给定的x及y坐标值的反正切值
+    cos(x)          返回x的弧度的余弦值
+    hypot(x,y)      返回欧几里德范数sqrt(x*x + y*y), 获取直角三角形斜边的长
+    sin(x)          返回x的弧度的正弦值
+    tan(x)          返回x的弧度的正切值
+    degree(x)       将弧度转换为角度, 如degree(math.pi/2), 返回90.0
+    radians(x)      将角度转换为弧度
+"""
 
 
 
