@@ -1,8 +1,10 @@
 package com.configmanage.config;
 
+import com.configmanage.inject.OtherMember;
 import com.configmanage.otherconfig.Configuration1;
 import com.configmanage.otherconfig.Configuration2;
 import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
@@ -25,6 +27,16 @@ public class MainConfig {
     public String run3() {
         return "配置3";
     }
+
+    @Bean
+    @ConfigurationProperties(prefix = "member")
+    public OtherMember otherMember() {
+        return new OtherMember();
+    }
+
+    /**
+     * 使用bean绑定, 这种方式只能绑定简单的类型, 像date这种类型就没有对应的解决方案了
+     */
 
 
 }

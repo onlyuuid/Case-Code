@@ -5,6 +5,8 @@
     3. 访问字符串可以用[]来截取, Python中的字符串可以从左往右索引[0:5]
         也可以从右往左索引[-4:-1], 截取的字符含左不含右
 """
+import string
+
 # 字符串更新
 var = "hello world"
 print("已更新字符,", var[:11] + " runoob")
@@ -234,11 +236,110 @@ print(tmp) # runoob: www.runoob.com
 
 # 字符串内建函数
 """
-方法                     描述
-capitalize()            将字符串的首字母大写
+方法                          描述
+capitalize()                 将字符串的首字母大写
 
-center()                返回一个指定的宽度width居中的字符串, fillchar为填充的字符串, 默认为空格
+center(width,fillchar)       返回一个指定的宽度width居中的字符串, fillchar为填充的字符串, 默认为空格
 
+count(str,beg=0,end=len(string))
+                             返回str在string里面出现的次数, 如果beg或者end指定则返回指定范围内str出现的次数
 
+bytes.decode(encoding="utf-8", errors="strict")
+                             Python3中没有decode方法, 但我们可以使用bytes对象的decode()方法来解码给定的bytes
+                             对象, 这个bytes对象可以由str.encode()来编码返回.
+
+encode(encoding="utf-8", errors="strict")
+                             以encoding指定的编码格式编码字符串
+                            
+endsWith(suffix,bug=0,end=len(string)) 
+                            检查字符串是否以suffix结束, 如果beg或者end指定则检查指定的范围是否以suffix结束,
+                            如果是, 返回True,否则返回False.
+
+expandtabs(tabsize=4)       把字符串string中的tab符号转为空格, tab符号默认的空格数是4
+
+find(str,beg=0,end=len(string))
+                            检测str是否包含在字符串中, 如果指定范围beg和end, 则检查是否包含在指定范围内, 
+                            如果包含返回开始的索引值, 否则返回-1
+                        
+index(str,beg=0,end=len(string))
+                            跟find()方法一样, 只不过如果str不在字符串中会报一个异常.
+                        
+isalnum()                   检查字符串是否由字母和数字组成, 即字符串中的所有字符都是字母或数字. 如果字符串至少有
+                            一个字符, 并且所有字符都是字母或数字, 则返回True, 否则返回False
+    
+isalpha()                   如果字符串至少有一个字符并且所有字符都是字母或中文字则返回True, 否则返回False
+
+isdigit()                   如果字符串只包含数字则返回True否则返回False
+
+islower()                   如果字符串中包含至少一个区分大小写的字符, 并且所有这些(区分大小写的)字符都是小写,
+                            则返回True, 否则返回False
+                        
+isnumeric()                 如果字符串中只包含数字字符, 则返回True, 否则返回False
+
+isspace()                   如果字符串中只包含空白, 则返回True, 否则返回False
+
+istitle()                   如果字符串时标题化的(见title())则返回True, 否则返回False
+
+isupper()                   如果字符串中包含至少一个区分大小写的字符, 并且所有这些(区分大小写的)字符都是大写, 则
+                            返回True, 否则返回False
+                        
+join(seq)                   以指定字符串作为分隔符, 将seq中所有的元素(的字符串表示)合并为一个新的字符串
+
+len(string)                 返回字符串长度
+
+ljust(width[,fillchar])     返回一个原字符串左对齐, 并且使用fillchar填充至长度width的新字符串, fillchar默认为
+                            空格.
+                            
+lower()                     转换字符串中所有大写字符为小写
+
+lstrip()                    截掉字符串左边的空格或指定字符
+
+maketrans()                 创建字符映射的转换表, 对于接受两个参数的最简单的调用方式, 第一个参数是字符串, 表示
+                            需要转换的字符, 第二个参数也是字符串表示转换的目标
+                            
+max(str)                    返回字符串str中最大的字母
+
+min(str)                    返回字符串str中最小的字母
+
+replace(old,new[,new])      将字符串中的old替换成new, 如果max指定, 则替换不超过max次
+
+rfind(str,beg=0,end=len(string))
+                            类似于find()函数, 不过是从右边开始查找
+      
+rindex(str,beg=0,end=len(string))
+                            类似于index(), 不过是从右边开始
+
+rjust(width,[,fillchar])    返回一个原字符串右对齐, 并使用fillchar(默认空格)填充至长度width的新字符串
+
+rstrip()                    删除字符串末尾的空格或指定字符
+
+split(str="",num=string.count(str))                                           
+                            以str为分隔符截取字符串, 如果num有指定值, 则仅截取num+1个子字符串
+           
+splitlines([keepends])      按照行('\r','\r\n','\n')分隔, 返回一个包含各行作为元素的列表, 如果参数keepends
+                            为False, 不包含换行符, 如果为True, 则保留换行符.                 
+        
+startswith(substr, beg=0,end=len(string))
+                            检查字符串是否是以指定子字符串substr开头, 是则返回True, 否则返回False. 如果beg
+                            和end指定值, 则在指定范围内检查
+                            
+strip([chars])              在字符串上执行lstrip()和rstrip()
+
+swapcase()                  将字符串中大写转换为小写, 小写转换为大写
+
+title()                     返回"标题化"的字符串, 就是说所有单词都是以大写开始, 其余字母均为小写(见istitle())
+
+translate(table,deletechars="")
+                            根据table给出的表(包含256个字符)转换string的字符串, 要过滤掉的字符串放到deletechars
+                            参数中
+
+upper()                     转换字符串中的小写字母为大写
+
+zfill(width)                返回长度为width的字符串, 原字符串右对齐, 前面填充0
+
+isdecimal()                 检查字符串是否只包含十进制字符, 如果是返回True, 否则返回False
 """
+s = "10111"
+table = str.maketrans("", "", "he")
+print(s.isdecimal())
 

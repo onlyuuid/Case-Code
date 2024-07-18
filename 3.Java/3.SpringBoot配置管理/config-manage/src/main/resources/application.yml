@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-manage
+  profiles:
+    default: dev
+    active: dev
+
+jasypt:
+  encryptor:
+    password: fkjHKJHKfs435jhfkjdahfaksldfhkajfhjs
+    property:
+      prefix: "ENC@["
+      suffix: "]"
+
+
+
