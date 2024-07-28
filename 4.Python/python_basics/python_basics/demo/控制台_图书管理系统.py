@@ -1,7 +1,7 @@
 """
 ===========================================控制台图书管理系统================================================
 """
-from python_basics.test.book_server  import borrow_books,return_books,del_books
+from python_basics.demo.book_server import borrow_books,return_books,del_books
 
 if __name__ == '__main__':
     print("===========欢迎使用图图书管理系统=============")
