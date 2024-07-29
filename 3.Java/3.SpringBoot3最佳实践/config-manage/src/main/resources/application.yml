@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config-manage
+  profiles:
+    default: dev
+    active: dev
+  mail:
+    host: smtp.exmail.qq.com
+
+jasypt:
+  encryptor:
+    password: fkjHKJHKfs435jhfkjdahfaksldfhkajfhjs
+    property:
+      prefix: "ENC@["
+      suffix: "]"
+
+
+
+
