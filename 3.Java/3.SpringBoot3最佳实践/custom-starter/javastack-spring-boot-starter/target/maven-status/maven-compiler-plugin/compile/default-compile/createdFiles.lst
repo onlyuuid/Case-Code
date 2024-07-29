@@ -1,0 +1,3 @@
+cn\javastack\springboot\starter\config\TestServiceAutoConfiguration.class
+cn\javastack\springboot\starter\JavastackSpringBootStarterApplication.class
+cn\javastack\springboot\starter\service\TestService.class

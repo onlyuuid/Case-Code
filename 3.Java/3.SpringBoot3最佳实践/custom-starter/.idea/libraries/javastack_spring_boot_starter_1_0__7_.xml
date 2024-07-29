@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="javastack-spring-boot-starter-1.0 (7)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javastack-spring-boot-starter-sample/src/main/resources/lib/javastack-spring-boot-starter-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/javastack-spring-boot-starter-sample/src/main/resources/lib/javastack-spring-boot-starter-1.0.jar!/" recursive="false" />
+  </library>
+</component>
