@@ -19,6 +19,14 @@ public class DemoApplication {
     public CommandLineRunner demo(TestService testService) {
         return (args) -> {
             log.info(testService.getServiceName());
+            /**
+             * 当application.yml文件中满足
+             * javastack:
+             *   starter:
+             *     enabled: true
+             * 时打印如下语句
+             * 2024-07-29T22:54:12.316+08:00  INFO 2476 --- [           main] com.example.demo.DemoApplication         : java 技术栈
+             */
         };
     }
 

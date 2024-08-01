@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: spring-boot-log
+
+
+#logging:
+#  file:
+#    name: ./logs/javastack.log  配置将日志输出至日志文件
+#  level:
+#    root: info
+#    org.springframework: warn
+
+# 日志分组
+#logging:
+#  group:
+#    tomcat: org.apache.catalina,org.apache.coyote,org.apache.tomcat
+#  level:
+#    tomcat: warn
+# 表示只要是tomcat下org.apache.catalina, org.apache.coyote, org.apache.tomcat的日志, 日志级别为error
+
+# 日志归档
+#logging:
+#  file:
+#    name: ./logs/javastack.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 1KB
+
+
