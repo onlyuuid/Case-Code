@@ -1,8 +1,12 @@
 spring:
   profiles:
-    active: prod
+    active: dev
+
   application:
     name: spring-boot-log
+  output:
+    ansi:
+      enabled: always # 开启彩色日志
 
 
 #logging:
